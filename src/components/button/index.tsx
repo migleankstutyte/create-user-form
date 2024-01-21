@@ -7,6 +7,7 @@ interface ButtonProps {
   children?: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
+  type?: string;
 }
 
 const UIButton = styled.button<ButtonProps>`
@@ -31,9 +32,22 @@ const UIButton = styled.button<ButtonProps>`
     cursor: auto;
   }
 `;
-const Button = ({ color, children, onClick, disabled, small }: ButtonProps) => {
+const Button = ({
+  color,
+  children,
+  onClick,
+  disabled,
+  small,
+  type
+}: ButtonProps) => {
   return (
-    <UIButton onClick={onClick} color={color} disabled={disabled} small={small}>
+    <UIButton
+      onClick={onClick}
+      color={color}
+      disabled={disabled}
+      small={small}
+      type={type}
+    >
       {children}
     </UIButton>
   );

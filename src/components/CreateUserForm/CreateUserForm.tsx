@@ -292,12 +292,14 @@ const CreateUserForm: React.FC = () => {
                               onClick={() => {
                                 index > 0 && arrayHelpers.remove(index);
                               }}
+                              type="button" // adding type='button' prevents form submit on any button click
                             >
                               -
                             </Button>
                             <Button
                               small="sm"
                               onClick={() => arrayHelpers.insert(index, '')}
+                              type="button" // adding type='button' prevents form submit on any button click
                             >
                               +
                             </Button>
