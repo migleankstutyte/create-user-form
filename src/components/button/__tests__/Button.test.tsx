@@ -1,10 +1,8 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import Button from '../index';
-import userEvent from '@testing-library/user-event';
-import exp from 'constants';
 
-describe('Create User form', () => {
+describe('Button', () => {
   it('should render button', () => {
     render(<Button />);
   });
