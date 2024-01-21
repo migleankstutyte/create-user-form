@@ -271,7 +271,9 @@ const CreateUserForm: React.FC = () => {
             </StyledCheckboxContainer>
 
             <StyledFieldContainer>
-              <Label htmlFor="name">{createUser.data.hobbies.label}</Label>
+              <Label htmlFor={createUser.data.hobbies.name}>
+                {createUser.data.hobbies.label}
+              </Label>
               <FieldArray
                 name={createUser.data.hobbies.name}
                 render={(arrayHelpers) => {
